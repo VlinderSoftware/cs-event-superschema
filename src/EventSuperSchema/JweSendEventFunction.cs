@@ -38,3 +38,4 @@ public static class JweSendEventFunction
         return formatAndSend;
     }
 }
+

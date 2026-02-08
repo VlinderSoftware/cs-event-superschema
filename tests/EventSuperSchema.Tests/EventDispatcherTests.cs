@@ -274,3 +274,4 @@ public class EventDispatcherTests
         capturedErrorHandler.Should().Be(err);
     }
 }
+

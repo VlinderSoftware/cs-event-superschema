@@ -53,3 +53,4 @@ public static class SuperSchema
         return eventData.IsValid(Schema, out errors);
     }
 }
+
