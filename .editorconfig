@@ -1,0 +1,85 @@
+root = true
+
+[*]
+charset = utf-8
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.{cs,vb}]
+indent_style = space
+indent_size = 4
+
+# .NET Code Style Rules
+dotnet_sort_system_directives_first = true
+dotnet_separate_import_directive_groups = false
+
+# C# Code Style Rules
+csharp_new_line_before_open_brace = all
+csharp_new_line_before_else = true
+csharp_new_line_before_catch = true
+csharp_new_line_before_finally = true
+csharp_new_line_before_members_in_object_initializers = true
+csharp_new_line_before_members_in_anonymous_types = true
+
+# StyleCop Rules Configuration
+# Disable file header requirements
+dotnet_diagnostic.SA1633.severity = none
+dotnet_diagnostic.SA1652.severity = none #NOTE: should be enabled for shared nuget packages
+
+# Allow underscore prefixed private fields (common C# convention)
+dotnet_diagnostic.SA1309.severity = none
+
+# Disable 'this.' prefix requirement (personal preference)
+dotnet_diagnostic.SA1101.severity = none
+
+# Relax some documentation requirements
+dotnet_diagnostic.SA1600.severity = suggestion # should be set to error for shared libraries
+dotnet_diagnostic.SA1601.severity = suggestion
+dotnet_diagnostic.SA1602.severity = suggestion # should be set to error for shared libraries
+
+# Allow global using statements
+dotnet_diagnostic.SA1200.severity = suggestion 
+
+# XML documentation analysis
+dotnet_diagnostic.SA0001.severity = none # should be set to error for shared libraries
+
+# Allow braces to share lines in some cases
+dotnet_diagnostic.SA1500.severity = suggestion
+
+# Allow omitting braces for single statements
+dotnet_diagnostic.SA1503.severity = suggestion
+
+# Disable member ordering - prefer private fields at end of class
+dotnet_diagnostic.SA1201.severity = none
+dotnet_diagnostic.SA1202.severity = warning
+
+# Require trailing commas for clean diffs
+dotnet_diagnostic.SA1413.severity = warning
+
+# Enable spacing rules for consistency
+dotnet_diagnostic.SA1000.severity = warning  # Space after new keyword
+dotnet_diagnostic.SA1009.severity = warning  # Closing parenthesis spacing
+dotnet_diagnostic.SA1011.severity = suggestion  # Closing square bracket spacing
+dotnet_diagnostic.SA1013.severity = warning  # Closing brace spacing
+dotnet_diagnostic.SA1108.severity = suggestion  # Block statements embedded comments
+dotnet_diagnostic.SA1111.severity = warning  # Closing parenthesis placement
+dotnet_diagnostic.SA1116.severity = warning  # Split parameter declarations
+dotnet_diagnostic.SA1117.severity = warning  # Parameter spacing
+dotnet_diagnostic.SA1128.severity = warning  # Constructor initializers
+dotnet_diagnostic.SA1206.severity = warning  # Modifier order requirements
+dotnet_diagnostic.SA1208.severity = warning  # System using directives
+dotnet_diagnostic.SA1210.severity = warning  # Using directive order
+dotnet_diagnostic.SA1400.severity = warning  # Access modifier requirements
+dotnet_diagnostic.SA1512.severity = none  # Single line comments
+dotnet_diagnostic.SA1513.severity = none  # Closing brace followed by blank line
+dotnet_diagnostic.SA1514.severity = none  # Element documentation preceded by blank line
+dotnet_diagnostic.SA1515.severity = none  # Single line comment preceded by blank line
+dotnet_diagnostic.SA1516.severity = none  # Elements separated by blank line
+dotnet_diagnostic.SA1518.severity = warning  # Parameter formatting consistency
+dotnet_diagnostic.SA1615.severity = suggestion  # Element return value documentation -- should be set to error for shared libraries
+dotnet_diagnostic.SA1623.severity = warning  # Property documentation format
+dotnet_diagnostic.SA1629.severity = none  # Documentation text ends with period
+
+[*.{json,xml,yml,yaml}]
+indent_style = space
+indent_size = 2
