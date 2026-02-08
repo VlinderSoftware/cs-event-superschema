@@ -299,3 +299,4 @@ public class SendEventFunctionTests
         capturedEvent["data"].Should().NotBeNull();
     }
 }
+

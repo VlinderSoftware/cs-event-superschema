@@ -37,3 +37,4 @@ public delegate object DataPreprocessor(object data);
 /// Delegate for sending formatted events
 /// </summary>
 public delegate void SendFunction(JObject eventData);
+
